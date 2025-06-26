@@ -1,0 +1,16 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+.table thead th {
+    vertical-align: middle;
+}
+
+.btn-group .btn {
+    min-width: 40px;
+}

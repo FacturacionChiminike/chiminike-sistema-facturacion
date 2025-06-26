@@ -1,0 +1,24 @@
+# Ignorar todo lo que no se debe subir
+
+# Laravel
+facturacion_chiminike/vendor/
+facturacion_chiminike/.env
+facturacion_chiminike/node_modules/
+facturacion_chiminike/storage/*.key
+facturacion_chiminike/storage/logs/
+facturacion_chiminike/bootstrap/cache/
+
+# Node.js APIs
+api/node_modules/
+api/.env
+
+# Archivos del sistema
+*.log
+*.sqlite
+*.bak
+.DS_Store
+Thumbs.db
+
+# Visual Studio Code o JetBrains
+.vscode/
+.idea/
