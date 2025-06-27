@@ -1,6 +1,8 @@
+CREATE DATABASE  IF NOT EXISTS `facturas_chiminikee` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `facturas_chiminikee`;
 -- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: factura_chiminike
+-- Host: 127.0.0.1    Database: facturas_chiminikee
 -- ------------------------------------------------------
 -- Server version	8.0.42
 
@@ -37,7 +39,7 @@ CREATE TABLE `adicionales` (
 
 LOCK TABLES `adicionales` WRITE;
 /*!40000 ALTER TABLE `adicionales` DISABLE KEYS */;
-INSERT INTO `adicionales` VALUES (2,'Parque Vial','Acceso al parque vial por persona',80.00),(3,'Merienda actualizada','Nueva descripción',60.00),(7,'FDJSDFHSFDJH','45345341',3123.00);
+INSERT INTO `adicionales` VALUES (2,'Parque Vial','Acceso al parque vial por persona',80.00),(3,'Merienda actualizada','Nueva descripción',60.00),(7,'casa del equilbrio','casa interactiva',50.00);
 /*!40000 ALTER TABLE `adicionales` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -56,7 +58,7 @@ CREATE TABLE `bitacora` (
   `descripcion` text,
   `fecha` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=80 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=95 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -65,7 +67,7 @@ CREATE TABLE `bitacora` (
 
 LOCK TABLES `bitacora` WRITE;
 /*!40000 ALTER TABLE `bitacora` DISABLE KEYS */;
-INSERT INTO `bitacora` VALUES (1,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-15 06:57:04'),(2,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-15 19:17:42'),(3,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-15 19:29:28'),(4,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-15 20:33:21'),(5,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-15 20:41:36'),(6,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-15 20:43:21'),(7,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-15 20:45:58'),(8,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-15 21:18:36'),(9,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-17 04:54:09'),(12,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-17 05:27:43'),(13,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-17 05:43:06'),(14,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-17 05:52:06'),(15,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-20 15:42:12'),(16,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-20 16:00:17'),(17,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-20 16:07:54'),(18,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-20 16:58:07'),(19,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-20 17:01:28'),(20,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-20 17:02:54'),(21,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-20 17:21:28'),(22,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-20 21:07:29'),(23,4,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-20 21:52:10'),(24,4,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-20 21:52:39'),(25,13,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-20 22:10:50'),(26,13,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-20 22:11:50'),(27,13,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-20 23:12:51'),(28,13,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 01:33:37'),(29,13,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 01:39:46'),(30,13,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 02:29:17'),(31,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 05:13:44'),(32,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 05:21:13'),(33,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 05:26:11'),(34,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 05:44:30'),(35,7,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 05:46:39'),(36,7,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 05:49:21'),(37,7,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 05:51:03'),(38,13,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 16:45:33'),(39,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 16:57:11'),(40,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 17:03:32'),(41,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 17:08:49'),(42,7,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 17:10:13'),(43,5,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 17:12:52'),(44,5,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 17:13:59'),(45,5,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 17:19:11'),(46,15,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 17:23:16'),(47,15,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 17:24:03'),(48,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-22 04:56:36'),(49,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-22 05:04:06'),(50,5,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-22 05:05:17'),(51,5,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-22 05:13:18'),(52,5,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-22 05:19:17'),(53,5,'Cliente','Eliminar','Eliminación de Cliente desde IP ::1','2025-06-22 05:19:57'),(54,5,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-22 05:23:32'),(55,5,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-22 05:38:25'),(56,5,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-23 01:23:32'),(57,5,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-23 03:42:59'),(60,5,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-23 15:22:45'),(61,5,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-23 15:32:22'),(62,5,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-23 15:52:02'),(63,5,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-23 16:04:28'),(64,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-23 16:55:54'),(65,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-24 03:40:16'),(66,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-24 05:53:41'),(67,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-24 06:24:20'),(68,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-24 06:44:55'),(69,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-24 07:05:22'),(70,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-25 04:01:20'),(71,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-25 04:14:54'),(72,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-25 04:17:27'),(73,5,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-25 04:39:15'),(74,5,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-25 04:43:17'),(75,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-25 04:44:57'),(76,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-25 05:14:34'),(78,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-25 14:23:01'),(79,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-25 17:02:36');
+INSERT INTO `bitacora` VALUES (1,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-15 06:57:04'),(2,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-15 19:17:42'),(3,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-15 19:29:28'),(4,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-15 20:33:21'),(5,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-15 20:41:36'),(6,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-15 20:43:21'),(7,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-15 20:45:58'),(8,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-15 21:18:36'),(9,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-17 04:54:09'),(12,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-17 05:27:43'),(13,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-17 05:43:06'),(14,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-17 05:52:06'),(15,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-20 15:42:12'),(16,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-20 16:00:17'),(17,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-20 16:07:54'),(18,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-20 16:58:07'),(19,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-20 17:01:28'),(20,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-20 17:02:54'),(21,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-20 17:21:28'),(22,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-20 21:07:29'),(23,4,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-20 21:52:10'),(24,4,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-20 21:52:39'),(25,13,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-20 22:10:50'),(26,13,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-20 22:11:50'),(27,13,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-20 23:12:51'),(28,13,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 01:33:37'),(29,13,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 01:39:46'),(30,13,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 02:29:17'),(31,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 05:13:44'),(32,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 05:21:13'),(33,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 05:26:11'),(34,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 05:44:30'),(35,7,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 05:46:39'),(36,7,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 05:49:21'),(37,7,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 05:51:03'),(38,13,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 16:45:33'),(39,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 16:57:11'),(40,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 17:03:32'),(41,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 17:08:49'),(42,7,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 17:10:13'),(43,5,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 17:12:52'),(44,5,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 17:13:59'),(45,5,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 17:19:11'),(46,15,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 17:23:16'),(47,15,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-21 17:24:03'),(48,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-22 04:56:36'),(49,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-22 05:04:06'),(50,5,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-22 05:05:17'),(51,5,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-22 05:13:18'),(52,5,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-22 05:19:17'),(53,5,'Cliente','Eliminar','Eliminación de Cliente desde IP ::1','2025-06-22 05:19:57'),(54,5,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-22 05:23:32'),(55,5,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-22 05:38:25'),(56,5,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-23 01:23:32'),(57,5,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-23 03:42:59'),(60,16,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-23 15:59:18'),(61,16,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-23 21:26:17'),(62,16,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-23 23:03:28'),(63,16,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-23 23:04:18'),(64,16,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-23 23:14:16'),(65,16,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-23 23:36:11'),(66,16,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-24 00:24:26'),(67,16,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-24 02:17:55'),(68,16,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-24 16:09:33'),(69,16,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-24 16:49:27'),(70,16,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-24 20:54:16'),(71,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-24 21:12:05'),(72,17,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-24 21:17:24'),(73,17,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-24 21:18:23'),(74,18,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-24 21:29:17'),(75,18,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-24 21:29:49'),(76,18,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-24 21:43:57'),(77,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-24 22:16:48'),(78,18,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-24 22:22:21'),(79,17,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-24 22:40:01'),(80,17,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-25 00:03:27'),(81,17,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-25 00:08:00'),(82,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-25 16:27:25'),(83,20,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-25 16:43:50'),(84,20,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-25 16:44:51'),(86,18,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-25 21:02:23'),(87,20,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-25 21:07:10'),(88,18,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-25 21:13:36'),(89,20,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-25 21:27:21'),(90,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-26 00:10:05'),(91,18,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-26 00:16:52'),(92,18,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-26 00:19:00'),(93,1,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-26 00:20:48'),(94,18,'Login','Acceso','Inicio de sesión exitoso desde IP ::1','2025-06-26 00:22:13');
 /*!40000 ALTER TABLE `bitacora` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -77,8 +79,8 @@ DROP TABLE IF EXISTS `cache`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `cache` (
-  `key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `value` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `value` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `expiration` int NOT NULL,
   PRIMARY KEY (`key`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -101,8 +103,8 @@ DROP TABLE IF EXISTS `cache_locks`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `cache_locks` (
-  `key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `owner` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `owner` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `expiration` int NOT NULL,
   PRIMARY KEY (`key`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -142,7 +144,7 @@ CREATE TABLE `cai` (
 
 LOCK TABLES `cai` WRITE;
 /*!40000 ALTER TABLE `cai` DISABLE KEYS */;
-INSERT INTO `cai` VALUES (3,'CAI-TEST-123456-Ulmate','00020001','00150000','2025-12-19',0,'2025-06-13 16:34:02'),(4,'CAI-2025-009-actualizado','00020001','00150000','2025-10-15',1,'2025-06-15 21:20:49');
+INSERT INTO `cai` VALUES (3,'CAI-TEST-123456-Ulmate','00020001','00150000','2025-12-19',0,'2025-06-13 16:34:02'),(4,'CAI-2025-009-000001','00020001','00150000','2025-10-15',1,'2025-06-15 21:20:49');
 /*!40000 ALTER TABLE `cai` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -197,7 +199,7 @@ CREATE TABLE `correos` (
 
 LOCK TABLES `correos` WRITE;
 /*!40000 ALTER TABLE `correos` DISABLE KEYS */;
-INSERT INTO `correos` VALUES (6,'michitogarcia.mg@gmail.com',6),(7,'carlos.mendoza@gmail.com',7),(8,'carlos.rivera@gmail.com',10),(9,'guerraclanes65@gmail.com',14),(11,'juanperez@gmail.com',16),(12,'jua453rez@gmail.com',17),(13,'camila@example.com',21),(14,'ju222ez@gmail.com',26),(20,'myke_mg@correo.com',32),(21,'myke_mg@correo.com',33),(22,'myke_mg@correo.com',34),(23,'ju222e22z@gmail.com',35),(25,'hackerputos2@gmail.com',37),(26,'probandocosas@gmail.com',38),(27,'hackerputos2@gmail.com',39),(28,'michitogarcia12@gmail.com',40),(29,'miguelbarahona718@gmail.com',41),(33,'narutoizumaki265@gmail.com',46),(34,'narutoizumaki265@gmail.com',47),(35,'momobellaco@gmail.com',49),(36,'momobellaco@gmail.com',50),(38,'momobellaco@gmail.com',52),(39,'paseguerra@gmail.com',53),(40,'miguelgarcia9647@gmail.com',54),(41,'holamundo@gmail.com',55),(42,'holamundo@gmail.com',56),(43,'hipernova504@gmail.com',57),(44,'msucles3288@gmail.com',58),(45,'vivam88978@decodewp.com',59),(46,'narutoizumaki265@gmail.com',60),(47,'narutoizumaki265@gmail.com',61),(48,'miguelgarcia9647@gmail.com',62);
+INSERT INTO `correos` VALUES (6,'michitogarcia.mg@gmail.com',6),(7,'carlos.mendoza@gmail.com',7),(11,'juanperez@gmail.com',16),(12,'jua453rez@gmail.com',17),(13,'camila@example.com',21),(14,'ju222ez@gmail.com',26),(20,'myke_mg@correo.com',32),(21,'myke_mg@correo.com',33),(22,'myke_mg@correo.com',34),(23,'ju222e22z@gmail.com',35),(25,'hackerputos2@gmail.com',37),(38,'momobellaco@gmail.com',52),(41,'holamundo@gmail.com',55),(45,'kellyncastillo1203@gmail.com',59),(46,'msucles3288@gmail.com',60),(47,'aldairfiguero09@gmail.com',62),(48,'unah.chimitech1@gmail.com',63);
 /*!40000 ALTER TABLE `correos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -309,37 +311,6 @@ INSERT INTO `detalle_cotizacion` VALUES (6,5,'Silla VIP',35.00,175.00,2),(7,1,'P
 UNLOCK TABLES;
 
 --
--- Table structure for table `detalle_factura`
---
-
-DROP TABLE IF EXISTS `detalle_factura`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `detalle_factura` (
-  `cod_detalle_factura` int NOT NULL AUTO_INCREMENT,
-  `cod_factura` int NOT NULL,
-  `cantidad` int NOT NULL,
-  `descripcion` text NOT NULL,
-  `precio_unitario` decimal(10,2) NOT NULL,
-  `total` decimal(10,2) NOT NULL,
-  `tipo` enum('Evento','Entrada','Paquete','Adicional','Inventario','Otro') NOT NULL,
-  `referencia` int DEFAULT NULL,
-  PRIMARY KEY (`cod_detalle_factura`),
-  KEY `cod_factura` (`cod_factura`),
-  CONSTRAINT `detalle_factura_ibfk_1` FOREIGN KEY (`cod_factura`) REFERENCES `facturas` (`cod_factura`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `detalle_factura`
---
-
-LOCK TABLES `detalle_factura` WRITE;
-/*!40000 ALTER TABLE `detalle_factura` DISABLE KEYS */;
-/*!40000 ALTER TABLE `detalle_factura` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `direcciones`
 --
 
@@ -365,7 +336,7 @@ CREATE TABLE `direcciones` (
 
 LOCK TABLES `direcciones` WRITE;
 /*!40000 ALTER TABLE `direcciones` DISABLE KEYS */;
-INSERT INTO `direcciones` VALUES (6,'Zambrano actualizado',6,3),(7,'Col. El Sauce, Tegucigalpa',7,2),(8,'Barrio Abajo, Tegucigalpa',10,3),(9,'Col. Las Brisas, Tegucigalpa',14,3),(11,'Col. Las Uvas',16,1),(12,'Colonia Las Uvas',17,1),(13,'Col. Palmira, Tegucigalpa',21,1),(14,'Colonia Las Uvas',26,1),(20,'sdfghgfd',32,1),(21,'gguhhhhuhubuu',33,1),(22,'hola prueba',34,1),(23,'Colonia Las Uvas',35,1),(25,'dcsdcdscs',37,1),(26,'Canaán',38,2),(27,'Col. El Prado, Casa 15',39,2),(28,'Col. Las Brisas, Tegucigalpa',40,3),(29,'Canaán',41,2),(33,'Col. Las Brisas, Tegucigalpa',46,3),(34,'Zambrano',47,2),(35,'Siguatepeque',49,1),(36,'hjasjsjasjajsajsa',50,1),(38,'Siguatepeque',52,3),(39,'Aldea Zambrano',53,109),(40,'Prueba exotica',54,13),(41,'JAJAJAJAJAAJA',55,2),(42,'JAJAJAJAJAAJA',56,79),(43,'LA UNAH',57,110),(44,'zambrano',59,102),(45,'pueblito del olvido',60,17),(46,'Barrio Abajo, Tegucigalpa',61,12),(47,'Prueba exotica',62,13);
+INSERT INTO `direcciones` VALUES (6,'Zambrano actualizado',6,3),(7,'Col. El Sauce, Tegucigalpa',7,2),(11,'Col. Las Uvas',16,1),(12,'Colonia Las Uvas',17,1),(13,'Col. Palmira, Tegucigalpa',21,1),(14,'Colonia Las Uvas',26,1),(20,'sdfghgfd',32,1),(21,'gguhhhhuhubuu',33,1),(22,'hola prueba',34,1),(23,'Colonia Las Uvas',35,1),(25,'dcsdcdscs',37,1),(38,'Siguatepeque',52,3),(41,'JAJAJAJAJAAJA',55,2),(44,'colonia hatillo',59,6),(45,'El pedregal',60,1),(46,'Sonaguera',62,32),(47,'A la par BCH',63,129);
 /*!40000 ALTER TABLE `direcciones` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -397,7 +368,7 @@ CREATE TABLE `empleados` (
 
 LOCK TABLES `empleados` WRITE;
 /*!40000 ALTER TABLE `empleados` DISABLE KEYS */;
-INSERT INTO `empleados` VALUES (6,'Admin total',95000.00,'2025-05-07 00:00:00',6,1),(7,'Coordinador de Eventos',22000.00,'2025-06-07 00:00:00',10,2),(8,'Técnico audiovisual',16000.00,'2025-06-10 00:00:00',14,2),(9,'La Bonita del Grupo',89000.00,'2025-06-18 00:00:00',38,2),(10,'The Best',56897.00,'2024-12-25 00:00:00',39,3),(11,'Técnico audiovisual',15000.00,'2025-06-10 00:00:00',40,1),(12,'La Bonita del Grupo',23451.00,'2025-06-18 00:00:00',41,2),(13,'Técnico audiovisual',15000.00,'2025-06-10 00:00:00',46,1),(14,'solo se que ya no',12000.00,'2024-10-09 00:00:00',47,2),(15,'Barcelona',12345.00,'2025-02-12 00:00:00',49,1),(16,'probando valiaaciones',89999.00,'2025-03-04 00:00:00',50,1),(17,'Jefe Inmediato',30900.00,'2025-06-18 00:00:00',53,2),(18,'Jefe del Mejor',90000.00,'2004-12-27 00:00:00',54,1),(19,'Jefe Inmediato',5454.00,'2025-01-08 00:00:00',56,2),(20,'Coordinador de Eventos',23000.00,'2024-06-12 00:00:00',57,1),(21,'informatica',10000.00,'2025-06-16 00:00:00',58,1),(22,'guapo',23888.00,'2025-06-26 00:00:00',59,2),(23,'Jefe Departamento',456000.00,'2025-06-25 00:00:00',60,1),(24,'Coordinador de Eventos',22000.00,'2025-06-11 00:00:00',61,1),(25,'miguel el guapo',34873.00,'2025-06-18 00:00:00',62,1);
+INSERT INTO `empleados` VALUES (6,'Admin total',95000.00,'2025-05-07 00:00:00',6,1),(22,'Admin total',24000.00,'2015-03-12 00:00:00',59,1),(23,'informatica',100000.00,'2025-03-10 00:00:00',60,1),(24,'Eventos',9000.00,'2025-06-24 00:00:00',62,3),(25,'Eventos',100000.00,'2025-05-20 00:00:00',63,1);
 /*!40000 ALTER TABLE `empleados` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -422,7 +393,7 @@ CREATE TABLE `entradas` (
 
 LOCK TABLES `entradas` WRITE;
 /*!40000 ALTER TABLE `entradas` DISABLE KEYS */;
-INSERT INTO `entradas` VALUES (1,'Entrada General funciona',150.00),(3,'myke mejor',1234.00),(4,'jhsdahjsad',3432.00);
+INSERT INTO `entradas` VALUES (1,'Entrada General',150.00),(3,'Entrada escolar',120.00),(4,'Entrada tercera edad',75.00);
 /*!40000 ALTER TABLE `entradas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -456,54 +427,6 @@ INSERT INTO `evento` VALUES (2,'Cumpleaños de Sofía','2025-07-10','15:30:00',2
 UNLOCK TABLES;
 
 --
--- Table structure for table `facturas`
---
-
-DROP TABLE IF EXISTS `facturas`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `facturas` (
-  `cod_factura` int NOT NULL AUTO_INCREMENT,
-  `numero_factura` varchar(30) NOT NULL,
-  `fecha_emision` date NOT NULL,
-  `cod_cliente` int NOT NULL,
-  `direccion` text NOT NULL,
-  `rtn` varchar(20) DEFAULT NULL,
-  `cod_cai` int NOT NULL,
-  `rango_desde` varchar(25) DEFAULT NULL,
-  `rango_hasta` varchar(25) DEFAULT NULL,
-  `fecha_limite` date DEFAULT NULL,
-  `tipo_factura` enum('Evento','Recorrido Escolar','Taquilla General','Libros') NOT NULL,
-  `descuento_otorgado` decimal(10,2) DEFAULT '0.00',
-  `rebajas_otorgadas` decimal(10,2) DEFAULT '0.00',
-  `importe_exento` decimal(10,2) DEFAULT '0.00',
-  `importe_gravado_18` decimal(10,2) DEFAULT '0.00',
-  `importe_gravado_15` decimal(10,2) DEFAULT '0.00',
-  `impuesto_15` decimal(10,2) DEFAULT '0.00',
-  `impuesto_18` decimal(10,2) DEFAULT '0.00',
-  `importe_exonerado` decimal(10,2) DEFAULT '0.00',
-  `subtotal` decimal(10,2) NOT NULL,
-  `total_pago` decimal(10,2) NOT NULL,
-  `observaciones` text,
-  PRIMARY KEY (`cod_factura`),
-  UNIQUE KEY `numero_factura` (`numero_factura`),
-  KEY `cod_cliente` (`cod_cliente`),
-  KEY `cod_cai` (`cod_cai`),
-  CONSTRAINT `facturas_ibfk_1` FOREIGN KEY (`cod_cliente`) REFERENCES `clientes` (`cod_cliente`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `facturas_ibfk_2` FOREIGN KEY (`cod_cai`) REFERENCES `cai` (`cod_cai`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `facturas`
---
-
-LOCK TABLES `facturas` WRITE;
-/*!40000 ALTER TABLE `facturas` DISABLE KEYS */;
-/*!40000 ALTER TABLE `facturas` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `failed_jobs`
 --
 
@@ -512,11 +435,11 @@ DROP TABLE IF EXISTS `failed_jobs`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `failed_jobs` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `uuid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `uuid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `connection` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `queue` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `payload` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `exception` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`)
@@ -547,7 +470,7 @@ CREATE TABLE `inventario` (
   `cantidad_disponible` int NOT NULL,
   `estado` tinyint(1) DEFAULT '1',
   PRIMARY KEY (`cod_inventario`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -556,7 +479,7 @@ CREATE TABLE `inventario` (
 
 LOCK TABLES `inventario` WRITE;
 /*!40000 ALTER TABLE `inventario` DISABLE KEYS */;
-INSERT INTO `inventario` VALUES (2,'Laptop Gamer Actualizada','Asus ROG Strix 2025',1599.99,13,0);
+INSERT INTO `inventario` VALUES (2,'Manteles','Mesa redonda',143.00,5,0),(4,'Toldos','medida 5x5',1035.00,6,1);
 /*!40000 ALTER TABLE `inventario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -568,13 +491,13 @@ DROP TABLE IF EXISTS `job_batches`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `job_batches` (
-  `id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `total_jobs` int NOT NULL,
   `pending_jobs` int NOT NULL,
   `failed_jobs` int NOT NULL,
-  `failed_job_ids` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `options` mediumtext COLLATE utf8mb4_unicode_ci,
+  `failed_job_ids` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `options` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `cancelled_at` int DEFAULT NULL,
   `created_at` int NOT NULL,
   `finished_at` int DEFAULT NULL,
@@ -600,8 +523,8 @@ DROP TABLE IF EXISTS `jobs`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `jobs` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `queue` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `queue` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `payload` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `attempts` tinyint unsigned NOT NULL,
   `reserved_at` int unsigned DEFAULT NULL,
   `available_at` int unsigned NOT NULL,
@@ -629,7 +552,7 @@ DROP TABLE IF EXISTS `migrations`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `migrations` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `migration` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -684,7 +607,7 @@ CREATE TABLE `objetos` (
   `tipo_objeto` varchar(50) DEFAULT NULL,
   `descripcion` text,
   PRIMARY KEY (`cod_objeto`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -693,7 +616,7 @@ CREATE TABLE `objetos` (
 
 LOCK TABLES `objetos` WRITE;
 /*!40000 ALTER TABLE `objetos` DISABLE KEYS */;
-INSERT INTO `objetos` VALUES (1,'Pantalla Empleados','Gestión de empleados'),(2,'Pantalla Productos','Gestión de productos'),(3,'Pantalla Salones','Gestión de salones'),(4,'Pantalla Cotización','Gestión de cotizaciones'),(5,'Pantalla Reservación','Gestión de reservaciones'),(6,'Pantalla Eventos','Facturación de eventos'),(7,'Pantalla Entradas','Facturación de entradas generales'),(8,'Pantalla Seguridad','Panel de administración'),(9,'Pantalla CAI','Gestión de CAI'),(10,'Pantalla Bitácora','Bitácora del sistema'),(11,'Pantalla Clientes','Gestión de clientes'),(12,'Pantalla Escolares','Gestión de recorridos escolares'),(13,'Pantalla Backup','Gestión de Backup'),(17,'solo le puse 30','hola soy las pruebas'),(18,'soy el mejor','pero me falta un poco'),(19,'probadno csosas','sirve?'),(20,'editar empleado','Gestión de empleados');
+INSERT INTO `objetos` VALUES (1,'Pantalla Empleados','Gestión de empleados'),(2,'Pantalla Productos','Gestión de productos'),(3,'Pantalla Salones','Gestión de salones'),(4,'Pantalla Cotización','Gestión de cotizaciones'),(5,'Pantalla Reservación','Gestión de reservaciones'),(6,'Pantalla Eventos','Facturación de eventos'),(7,'Pantalla Entradas','Facturación de entradas generales'),(8,'Pantalla Seguridad','Panel de administración'),(9,'Pantalla CAI','Gestión de CAI'),(10,'Pantalla Bitácora','Bitácora del sistema'),(11,'Pantalla Clientes','Gestión de clientes'),(12,'Pantalla Escolares','Gestión de recorridos escolares'),(13,'Pantalla Backup','Gestión de Backup'),(18,'solo editar','Gestión de salones'),(19,'solo ver epleado','Gestión de empleados');
 /*!40000 ALTER TABLE `objetos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -719,7 +642,7 @@ CREATE TABLE `paquetes` (
 
 LOCK TABLES `paquetes` WRITE;
 /*!40000 ALTER TABLE `paquetes` DISABLE KEYS */;
-INSERT INTO `paquetes` VALUES (1,'Paquete VIP Actualizado','Incluye acceso VIP, catering de lujo, transporte y hospedaje',3800.00);
+INSERT INTO `paquetes` VALUES (1,'Paquete VIP Actualizado','Acceso a todas las salas interactivas de museo',180.00);
 /*!40000 ALTER TABLE `paquetes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -731,8 +654,8 @@ DROP TABLE IF EXISTS `password_reset_tokens`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `password_reset_tokens` (
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -768,7 +691,7 @@ CREATE TABLE `permisos` (
   KEY `cod_objeto` (`cod_objeto`),
   CONSTRAINT `permisos_ibfk_1` FOREIGN KEY (`cod_rol`) REFERENCES `roles` (`cod_rol`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `permisos_ibfk_2` FOREIGN KEY (`cod_objeto`) REFERENCES `objetos` (`cod_objeto`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -777,7 +700,7 @@ CREATE TABLE `permisos` (
 
 LOCK TABLES `permisos` WRITE;
 /*!40000 ALTER TABLE `permisos` DISABLE KEYS */;
-INSERT INTO `permisos` VALUES (1,1,4,'Acceso total a Gestión de empleados',1,1,1,1),(2,1,2,'Acceso total a Gestión de productos',1,1,1,1),(3,1,3,'Acceso total a Gestión de salones probandoo',1,1,1,1),(4,1,4,'Acceso total a Gestión de cotizaciones',1,1,1,1),(5,1,5,'Acceso total a Gestión de reservaciones',1,1,1,1),(6,1,6,'Acceso total a Facturación de eventos',1,1,1,1),(7,1,7,'Acceso total a Facturación de entradas generales',1,1,1,1),(9,1,9,'Acceso total a Gestión de CAI',1,1,1,1),(10,1,10,'Acceso total a Bitácora del sistema',1,1,1,1),(17,1,1,'Gestión de productos',1,1,1,1),(18,4,3,'Gestión de salones',1,1,1,1),(19,4,4,'Gestión de cotizaciones',1,1,1,1),(20,4,5,'Gestión de reservaciones',1,1,1,1),(23,9,5,'Permiso actualizado por myke',1,0,1,1),(25,1,11,'Acceso total a Gestión de clientes',1,1,1,1),(26,1,12,'Acceso total a Gestión de recorridos escolares',1,1,1,1),(27,1,8,'Acceso total al Panel de administración',1,1,1,1),(28,1,13,'Acceso total a Gestión de Backup',1,1,1,1),(31,4,5,'UNA PRUEVA MAS',1,1,1,1),(33,1,12,'SDIJFSDFHISFDHISDFHIHSDFHIFSD',1,1,1,1),(37,2,1,'probando cosas',1,1,1,0);
+INSERT INTO `permisos` VALUES (1,1,4,'Acceso total a Gestión de empleados',1,0,0,1),(2,1,2,'Acceso total a Gestión de productos',1,1,1,1),(3,1,3,'Acceso total a Gestión de salones',1,1,1,1),(4,1,4,'Acceso total a Gestión de cotizaciones',1,1,1,1),(5,1,5,'Acceso total a Gestión de reservaciones',1,1,1,1),(6,1,6,'Acceso total a Facturación de eventos',1,1,1,1),(7,1,7,'Acceso total a Facturación de entradas generales',1,1,1,1),(8,2,8,'Acceso total a Panel de administración',1,1,1,1),(9,1,9,'Acceso total a Gestión de CAI',1,1,1,1),(10,1,10,'Acceso total a Bitácora del sistema',1,1,1,1),(16,2,6,'Facturación de eventos',1,0,1,0),(17,1,1,'Gestión de productos',1,1,1,1),(18,4,3,'Gestión de salones',1,1,1,1),(19,4,4,'Gestión de cotizaciones',1,1,1,1),(20,4,5,'Gestión de reservaciones',1,1,1,1),(21,5,7,'Facturación entradas generales',1,0,1,0),(23,9,5,'Permiso actualizado por myke',1,0,1,1),(25,1,11,'Acceso total a Gestión de clientes',1,1,1,1),(26,1,12,'Acceso total a Gestión de recorridos escolares',1,1,1,1),(27,1,8,'Acceso total al Panel de administración',1,1,1,1),(28,1,13,'Acceso total a Gestión de Backup',1,1,1,1),(29,5,12,'Ya no esta en duro',1,1,1,1),(30,2,6,'JEFE',1,1,1,1),(31,4,5,'UNA PRUEVA MAS',1,1,1,1),(32,5,9,'solo prueba si no lo dañe',1,1,1,1),(33,1,12,'SDIJFSDFHISFDHISDFHIHSDFHIFSD',1,1,1,1),(34,2,9,'provando',1,1,1,1),(35,2,2,'prueba',1,1,1,1),(36,14,1,'permiso',0,0,1,0),(37,4,19,'Probando objetos y con roles',0,0,1,0),(38,17,11,'permiso pantalla clientes',0,0,1,0),(39,17,11,'permiso',0,0,0,0),(40,4,11,'pantalla cliente',0,0,1,0);
 /*!40000 ALTER TABLE `permisos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -796,7 +719,7 @@ CREATE TABLE `personas` (
   `dni` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`cod_persona`),
   UNIQUE KEY `dni` (`dni`)
-) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -805,7 +728,7 @@ CREATE TABLE `personas` (
 
 LOCK TABLES `personas` WRITE;
 /*!40000 ALTER TABLE `personas` DISABLE KEYS */;
-INSERT INTO `personas` VALUES (6,'Miguel García sirve plox','2025-05-15','Masculino','0801890021222'),(7,'Carlos Mendoza actualizado 09','1990-12-05','Masculino','0801199012345'),(10,'Carlos Riveras','1992-03-20','Masculino','08011'),(14,'Javier Salgado si paso la prue','1990-06-15','Masculino','5674625387985'),(16,'Juan Pérez','1990-06-15','Masculino','0801199912345'),(17,'probanddo api','1990-06-15','Masculino','080912345'),(21,'Camila García','1995-08-12','Femenino','0801199512345'),(26,'probando el tipo','9999-06-15','Masculino','080120032341'),(32,'probando la vista','2002-02-07','Masculino','080120222222'),(33,'probando sweetalert2','2001-12-31','Masculino','08103421'),(34,'miguel barahona','2008-01-29','Masculino','08102345'),(35,'probando el tipo rsultad','9999-06-15','Masculino','333332341'),(37,'probando la vista','2001-06-05','Masculino','080120031345'),(38,'kellyn Castillo','1996-05-05','Masculino','08190121'),(39,'Admin Lord','1997-01-07','Masculino','080120259801'),(40,'prueba actualizacion','1990-06-15','Masculino','89129011000'),(41,'kellyn Castillo','2003-06-09','Masculino','6754333'),(46,'probando api','1990-06-15','Masculino','12098211221'),(47,'ya se jodio','2024-11-12','Masculino','65782129876'),(49,'funxiona siono','2007-01-30','Masculino','2345232314151'),(50,'Ultima prueba','2001-02-14','Masculino','6532653265236'),(52,'si funciono','1995-02-15','Masculino','2342353'),(53,'sirve','2005-02-14','Femenino','7628271611111'),(54,'Miguel Garcia','1997-01-13','Masculino','6654437777777'),(55,'sdhaudasdu','2009-02-03','Masculino','796865432'),(56,'Carlos Riveras','2025-06-03','Masculino','5555555555555'),(57,'Prueba Primer Ingreso','2006-02-14','Masculino','2342211111111'),(58,'Moises Ucles','2001-11-10','Masculino','0820200011123'),(59,'hola mundo','2025-06-03','Masculino','5634333333333'),(60,'probando ocultar','2024-01-10','Masculino','6533883838383'),(61,'kellyn Castillo','1995-01-31','Masculino','3455555555555'),(62,'probando campos ocultos','2025-06-12','Masculino','3435345345345');
+INSERT INTO `personas` VALUES (6,'Miguel García','2025-05-15','Masculino','0801890021222'),(7,'Carlos Mendoza prueba','1990-12-05','Masculino','0801199012345'),(16,'Juan Pérez','1990-06-15','Masculino','0801199912345'),(17,'probanddo api','1990-06-15','Masculino','080912345'),(21,'Camila García','1995-08-12','Femenino','0801199512345'),(26,'probando el tipo','9999-06-15','Masculino','080120032341'),(32,'probando la vista','2002-02-07','Masculino','080120222222'),(33,'probando sweetalert2','2001-12-31','Masculino','08103421'),(34,'miguel barahona','2008-01-29','Masculino','08102345'),(35,'probando el tipo rsultad','9999-06-15','Masculino','333332341'),(37,'probando la vista','2001-06-05','Masculino','080120031345'),(52,'si funciono','1995-02-15','Masculino','2342353'),(55,'sdhaudasdu','2009-02-03','Masculino','796865432'),(59,'Kellyn Castillo','2003-03-12','Femenino','0901200305623'),(60,'Moises Ucles','2001-11-10','Masculino','0820200011123'),(62,'Roger Aldair Figuero','2001-12-24','Masculino','022020020000'),(63,'chiminike','2000-01-25','Masculino','0801200087654');
 /*!40000 ALTER TABLE `personas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -822,7 +745,7 @@ CREATE TABLE `roles` (
   `descripcion` text,
   `estado` tinyint NOT NULL DEFAULT '1',
   PRIMARY KEY (`cod_rol`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -831,7 +754,7 @@ CREATE TABLE `roles` (
 
 LOCK TABLES `roles` WRITE;
 /*!40000 ALTER TABLE `roles` DISABLE KEYS */;
-INSERT INTO `roles` VALUES (1,'Dirección','probando api con laravel',1),(2,'FacEL','jdjhfgjgfhgg',1),(3,'Escolar','funciono o me mintio',1),(4,'Evento','si funciona o que',0),(5,'Factaquilla',NULL,1),(8,'Myke_pros','Es el mejor programando, la real.',1),(9,'ADMON Reservas','NUEVO PERMISO.',0),(11,'Ya no esta en Duro','JAJAJAJJAA sera que si sirve?',1),(13,'que paso soy el mejor','brrrrrrr si soy bueno',0);
+INSERT INTO `roles` VALUES (1,'Dirección','probando api con laravel',0),(2,'FacEL','jdjhfgjgfhgg',1),(3,'Escolar','funciono o me mintio',0),(4,'Evento','si funciona o que',0),(5,'Factaquilla',NULL,1),(8,'Myke_pros','Es el mejor programando, la real.',1),(9,'ADMON Reservas','NUEVO PERMISO.',1),(11,'Ya no esta en Duro','JAJAJAJJAA sera que si sirve?',1),(14,'super supervisor','supervisor de supervisores',0),(15,'dejo o dejo','jhdshdfsfsdgdsfydsfdufsddfsh',0),(16,'Todo por ricardo','ajsdjhdhsadhasdhjhdssadsad',1),(17,'supervisor','hola',1);
 /*!40000 ALTER TABLE `roles` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -901,11 +824,11 @@ DROP TABLE IF EXISTS `sessions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `sessions` (
-  `id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_id` bigint unsigned DEFAULT NULL,
-  `ip_address` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `user_agent` text COLLATE utf8mb4_unicode_ci,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ip_address` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_agent` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `payload` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `last_activity` int NOT NULL,
   PRIMARY KEY (`id`),
   KEY `sessions_user_id_index` (`user_id`),
@@ -919,7 +842,7 @@ CREATE TABLE `sessions` (
 
 LOCK TABLES `sessions` WRITE;
 /*!40000 ALTER TABLE `sessions` DISABLE KEYS */;
-INSERT INTO `sessions` VALUES ('D3KrBVEjdpovfmR0wsiH8tk8Ex4wpg6FZjwWx1fA',NULL,'127.0.0.1','Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Mobile Safari/537.36 Edg/137.0.0.0','YTo2OntzOjY6Il9mbGFzaCI7YToyOntzOjM6Im5ldyI7YTowOnt9czozOiJvbGQiO2E6MDp7fX1zOjY6Il90b2tlbiI7czo0MDoiWU5nUkhjUklxN3o3WVpIbVRFR0JTUHNtSzQybUxSNEhlSTNzR0FoYSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzQ6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9jb3RpemFjaW9uZXMiO31zOjg6InBlcm1pc29zIjthOjE1OntpOjA7YTo1OntzOjY6Im9iamV0byI7czoyNDoiR2VzdGnDs24gZGUgY290aXphY2lvbmVzIjtzOjg6Imluc2VydGFyIjtiOjE7czoxMDoiYWN0dWFsaXphciI7YjoxO3M6NzoibW9zdHJhciI7YjoxO3M6ODoiZWxpbWluYXIiO2I6MTt9aToxO2E6NTp7czo2OiJvYmpldG8iO3M6MjE6Ikdlc3Rpw7NuIGRlIHByb2R1Y3RvcyI7czo4OiJpbnNlcnRhciI7YjoxO3M6MTA6ImFjdHVhbGl6YXIiO2I6MTtzOjc6Im1vc3RyYXIiO2I6MTtzOjg6ImVsaW1pbmFyIjtiOjE7fWk6MjthOjU6e3M6Njoib2JqZXRvIjtzOjE5OiJHZXN0acOzbiBkZSBzYWxvbmVzIjtzOjg6Imluc2VydGFyIjtiOjE7czoxMDoiYWN0dWFsaXphciI7YjoxO3M6NzoibW9zdHJhciI7YjoxO3M6ODoiZWxpbWluYXIiO2I6MTt9aTozO2E6NTp7czo2OiJvYmpldG8iO3M6MjQ6Ikdlc3Rpw7NuIGRlIGNvdGl6YWNpb25lcyI7czo4OiJpbnNlcnRhciI7YjoxO3M6MTA6ImFjdHVhbGl6YXIiO2I6MTtzOjc6Im1vc3RyYXIiO2I6MTtzOjg6ImVsaW1pbmFyIjtiOjE7fWk6NDthOjU6e3M6Njoib2JqZXRvIjtzOjI1OiJHZXN0acOzbiBkZSByZXNlcnZhY2lvbmVzIjtzOjg6Imluc2VydGFyIjtiOjE7czoxMDoiYWN0dWFsaXphciI7YjoxO3M6NzoibW9zdHJhciI7YjoxO3M6ODoiZWxpbWluYXIiO2I6MTt9aTo1O2E6NTp7czo2OiJvYmpldG8iO3M6MjM6IkZhY3R1cmFjacOzbiBkZSBldmVudG9zIjtzOjg6Imluc2VydGFyIjtiOjE7czoxMDoiYWN0dWFsaXphciI7YjoxO3M6NzoibW9zdHJhciI7YjoxO3M6ODoiZWxpbWluYXIiO2I6MTt9aTo2O2E6NTp7czo2OiJvYmpldG8iO3M6MzQ6IkZhY3R1cmFjacOzbiBkZSBlbnRyYWRhcyBnZW5lcmFsZXMiO3M6ODoiaW5zZXJ0YXIiO2I6MTtzOjEwOiJhY3R1YWxpemFyIjtiOjE7czo3OiJtb3N0cmFyIjtiOjE7czo4OiJlbGltaW5hciI7YjoxO31pOjc7YTo1OntzOjY6Im9iamV0byI7czoxNToiR2VzdGnDs24gZGUgQ0FJIjtzOjg6Imluc2VydGFyIjtiOjE7czoxMDoiYWN0dWFsaXphciI7YjoxO3M6NzoibW9zdHJhciI7YjoxO3M6ODoiZWxpbWluYXIiO2I6MTt9aTo4O2E6NTp7czo2OiJvYmpldG8iO3M6MjE6IkJpdMOhY29yYSBkZWwgc2lzdGVtYSI7czo4OiJpbnNlcnRhciI7YjoxO3M6MTA6ImFjdHVhbGl6YXIiO2I6MTtzOjc6Im1vc3RyYXIiO2I6MTtzOjg6ImVsaW1pbmFyIjtiOjE7fWk6OTthOjU6e3M6Njoib2JqZXRvIjtzOjIxOiJHZXN0acOzbiBkZSBlbXBsZWFkb3MiO3M6ODoiaW5zZXJ0YXIiO2I6MTtzOjEwOiJhY3R1YWxpemFyIjtiOjE7czo3OiJtb3N0cmFyIjtiOjE7czo4OiJlbGltaW5hciI7YjoxO31pOjEwO2E6NTp7czo2OiJvYmpldG8iO3M6MjA6Ikdlc3Rpw7NuIGRlIGNsaWVudGVzIjtzOjg6Imluc2VydGFyIjtiOjE7czoxMDoiYWN0dWFsaXphciI7YjoxO3M6NzoibW9zdHJhciI7YjoxO3M6ODoiZWxpbWluYXIiO2I6MTt9aToxMTthOjU6e3M6Njoib2JqZXRvIjtzOjMyOiJHZXN0acOzbiBkZSByZWNvcnJpZG9zIGVzY29sYXJlcyI7czo4OiJpbnNlcnRhciI7YjoxO3M6MTA6ImFjdHVhbGl6YXIiO2I6MTtzOjc6Im1vc3RyYXIiO2I6MTtzOjg6ImVsaW1pbmFyIjtiOjE7fWk6MTI7YTo1OntzOjY6Im9iamV0byI7czoyNDoiUGFuZWwgZGUgYWRtaW5pc3RyYWNpw7NuIjtzOjg6Imluc2VydGFyIjtiOjE7czoxMDoiYWN0dWFsaXphciI7YjoxO3M6NzoibW9zdHJhciI7YjoxO3M6ODoiZWxpbWluYXIiO2I6MTt9aToxMzthOjU6e3M6Njoib2JqZXRvIjtzOjE4OiJHZXN0acOzbiBkZSBCYWNrdXAiO3M6ODoiaW5zZXJ0YXIiO2I6MTtzOjEwOiJhY3R1YWxpemFyIjtiOjE7czo3OiJtb3N0cmFyIjtiOjE7czo4OiJlbGltaW5hciI7YjoxO31pOjE0O2E6NTp7czo2OiJvYmpldG8iO3M6MzI6Ikdlc3Rpw7NuIGRlIHJlY29ycmlkb3MgZXNjb2xhcmVzIjtzOjg6Imluc2VydGFyIjtiOjE7czoxMDoiYWN0dWFsaXphciI7YjoxO3M6NzoibW9zdHJhciI7YjoxO3M6ODoiZWxpbWluYXIiO2I6MTt9fXM6NToidG9rZW4iO3M6MjE0MDoiZXlKaGJHY2lPaUpJVXpJMU5pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SmpiMlJmZFhOMVlYSnBieUk2SWpFaUxDSndaWEp0YVhOdmN5STZXM3NpYjJKcVpYUnZJam9pUjJWemRHbkRzMjRnWkdVZ1kyOTBhWHBoWTJsdmJtVnpJaXdpWTNKbFlYSWlPblJ5ZFdVc0ltMXZaR2xtYVdOaGNpSTZkSEoxWlN3aWJXOXpkSEpoY2lJNmRISjFaU3dpWld4cGJXbHVZWElpT25SeWRXVjlMSHNpYjJKcVpYUnZJam9pUjJWemRHbkRzMjRnWkdVZ2NISnZaSFZqZEc5eklpd2lZM0psWVhJaU9uUnlkV1VzSW0xdlpHbG1hV05oY2lJNmRISjFaU3dpYlc5emRISmhjaUk2ZEhKMVpTd2laV3hwYldsdVlYSWlPblJ5ZFdWOUxIc2liMkpxWlhSdklqb2lSMlZ6ZEduRHMyNGdaR1VnYzJGc2IyNWxjeUlzSW1OeVpXRnlJanAwY25WbExDSnRiMlJwWm1sallYSWlPblJ5ZFdVc0ltMXZjM1J5WVhJaU9uUnlkV1VzSW1Wc2FXMXBibUZ5SWpwMGNuVmxmU3g3SW05aWFtVjBieUk2SWtkbGMzUnB3N051SUdSbElHTnZkR2w2WVdOcGIyNWxjeUlzSW1OeVpXRnlJanAwY25WbExDSnRiMlJwWm1sallYSWlPblJ5ZFdVc0ltMXZjM1J5WVhJaU9uUnlkV1VzSW1Wc2FXMXBibUZ5SWpwMGNuVmxmU3g3SW05aWFtVjBieUk2SWtkbGMzUnB3N051SUdSbElISmxjMlZ5ZG1GamFXOXVaWE1pTENKamNtVmhjaUk2ZEhKMVpTd2liVzlrYVdacFkyRnlJanAwY25WbExDSnRiM04wY21GeUlqcDBjblZsTENKbGJHbHRhVzVoY2lJNmRISjFaWDBzZXlKdlltcGxkRzhpT2lKR1lXTjBkWEpoWTJuRHMyNGdaR1VnWlhabGJuUnZjeUlzSW1OeVpXRnlJanAwY25WbExDSnRiMlJwWm1sallYSWlPblJ5ZFdVc0ltMXZjM1J5WVhJaU9uUnlkV1VzSW1Wc2FXMXBibUZ5SWpwMGNuVmxmU3g3SW05aWFtVjBieUk2SWtaaFkzUjFjbUZqYWNPemJpQmtaU0JsYm5SeVlXUmhjeUJuWlc1bGNtRnNaWE1pTENKamNtVmhjaUk2ZEhKMVpTd2liVzlrYVdacFkyRnlJanAwY25WbExDSnRiM04wY21GeUlqcDBjblZsTENKbGJHbHRhVzVoY2lJNmRISjFaWDBzZXlKdlltcGxkRzhpT2lKSFpYTjBhY096YmlCa1pTQkRRVWtpTENKamNtVmhjaUk2ZEhKMVpTd2liVzlrYVdacFkyRnlJanAwY25WbExDSnRiM04wY21GeUlqcDBjblZsTENKbGJHbHRhVzVoY2lJNmRISjFaWDBzZXlKdlltcGxkRzhpT2lKQ2FYVERvV052Y21FZ1pHVnNJSE5wYzNSbGJXRWlMQ0pqY21WaGNpSTZkSEoxWlN3aWJXOWthV1pwWTJGeUlqcDBjblZsTENKdGIzTjBjbUZ5SWpwMGNuVmxMQ0psYkdsdGFXNWhjaUk2ZEhKMVpYMHNleUp2WW1wbGRHOGlPaUpIWlhOMGFjT3piaUJrWlNCbGJYQnNaV0ZrYjNNaUxDSmpjbVZoY2lJNmRISjFaU3dpYlc5a2FXWnBZMkZ5SWpwMGNuVmxMQ0p0YjNOMGNtRnlJanAwY25WbExDSmxiR2x0YVc1aGNpSTZkSEoxWlgwc2V5SnZZbXBsZEc4aU9pSkhaWE4wYWNPemJpQmtaU0JqYkdsbGJuUmxjeUlzSW1OeVpXRnlJanAwY25WbExDSnRiMlJwWm1sallYSWlPblJ5ZFdVc0ltMXZjM1J5WVhJaU9uUnlkV1VzSW1Wc2FXMXBibUZ5SWpwMGNuVmxmU3g3SW05aWFtVjBieUk2SWtkbGMzUnB3N051SUdSbElISmxZMjl5Y21sa2IzTWdaWE5qYjJ4aGNtVnpJaXdpWTNKbFlYSWlPblJ5ZFdVc0ltMXZaR2xtYVdOaGNpSTZkSEoxWlN3aWJXOXpkSEpoY2lJNmRISjFaU3dpWld4cGJXbHVZWElpT25SeWRXVjlMSHNpYjJKcVpYUnZJam9pVUdGdVpXd2daR1VnWVdSdGFXNXBjM1J5WVdOcHc3TnVJaXdpWTNKbFlYSWlPblJ5ZFdVc0ltMXZaR2xtYVdOaGNpSTZkSEoxWlN3aWJXOXpkSEpoY2lJNmRISjFaU3dpWld4cGJXbHVZWElpT25SeWRXVjlMSHNpYjJKcVpYUnZJam9pUjJWemRHbkRzMjRnWkdVZ1FtRmphM1Z3SWl3aVkzSmxZWElpT25SeWRXVXNJbTF2WkdsbWFXTmhjaUk2ZEhKMVpTd2liVzl6ZEhKaGNpSTZkSEoxWlN3aVpXeHBiV2x1WVhJaU9uUnlkV1Y5TEhzaWIySnFaWFJ2SWpvaVIyVnpkR25EczI0Z1pHVWdjbVZqYjNKeWFXUnZjeUJsYzJOdmJHRnlaWE1pTENKamNtVmhjaUk2ZEhKMVpTd2liVzlrYVdacFkyRnlJanAwY25WbExDSnRiM04wY21GeUlqcDBjblZsTENKbGJHbHRhVzVoY2lJNmRISjFaWDFkTENKcFlYUWlPakUzTlRBNE56QTVOek1zSW1WNGNDSTZNVGMxTURnM05EVTNNMzAuVF9BUS1EaWhiVVc2Njl1enJ4M2FfcUhpZHBPMXE4Tm5ZMHM2MHdSNTMxNCI7czo3OiJ1c3VhcmlvIjthOjU6e3M6MTE6ImNvZF91c3VhcmlvIjtpOjE7czoxNDoibm9tYnJlX3VzdWFyaW8iO3M6OToienVuZ2EuaGNoIjtzOjEzOiJwcmltZXJfYWNjZXNvIjtpOjA7czozOiJyb2wiO3M6MTA6IkRpcmVjY2nDs24iO3M6ODoicGVybWlzb3MiO2E6MTU6e2k6MDthOjU6e3M6Njoib2JqZXRvIjtzOjI0OiJHZXN0acOzbiBkZSBjb3RpemFjaW9uZXMiO3M6ODoiaW5zZXJ0YXIiO2I6MTtzOjEwOiJhY3R1YWxpemFyIjtiOjE7czo3OiJtb3N0cmFyIjtiOjE7czo4OiJlbGltaW5hciI7YjoxO31pOjE7YTo1OntzOjY6Im9iamV0byI7czoyMToiR2VzdGnDs24gZGUgcHJvZHVjdG9zIjtzOjg6Imluc2VydGFyIjtiOjE7czoxMDoiYWN0dWFsaXphciI7YjoxO3M6NzoibW9zdHJhciI7YjoxO3M6ODoiZWxpbWluYXIiO2I6MTt9aToyO2E6NTp7czo2OiJvYmpldG8iO3M6MTk6Ikdlc3Rpw7NuIGRlIHNhbG9uZXMiO3M6ODoiaW5zZXJ0YXIiO2I6MTtzOjEwOiJhY3R1YWxpemFyIjtiOjE7czo3OiJtb3N0cmFyIjtiOjE7czo4OiJlbGltaW5hciI7YjoxO31pOjM7YTo1OntzOjY6Im9iamV0byI7czoyNDoiR2VzdGnDs24gZGUgY290aXphY2lvbmVzIjtzOjg6Imluc2VydGFyIjtiOjE7czoxMDoiYWN0dWFsaXphciI7YjoxO3M6NzoibW9zdHJhciI7YjoxO3M6ODoiZWxpbWluYXIiO2I6MTt9aTo0O2E6NTp7czo2OiJvYmpldG8iO3M6MjU6Ikdlc3Rpw7NuIGRlIHJlc2VydmFjaW9uZXMiO3M6ODoiaW5zZXJ0YXIiO2I6MTtzOjEwOiJhY3R1YWxpemFyIjtiOjE7czo3OiJtb3N0cmFyIjtiOjE7czo4OiJlbGltaW5hciI7YjoxO31pOjU7YTo1OntzOjY6Im9iamV0byI7czoyMzoiRmFjdHVyYWNpw7NuIGRlIGV2ZW50b3MiO3M6ODoiaW5zZXJ0YXIiO2I6MTtzOjEwOiJhY3R1YWxpemFyIjtiOjE7czo3OiJtb3N0cmFyIjtiOjE7czo4OiJlbGltaW5hciI7YjoxO31pOjY7YTo1OntzOjY6Im9iamV0byI7czozNDoiRmFjdHVyYWNpw7NuIGRlIGVudHJhZGFzIGdlbmVyYWxlcyI7czo4OiJpbnNlcnRhciI7YjoxO3M6MTA6ImFjdHVhbGl6YXIiO2I6MTtzOjc6Im1vc3RyYXIiO2I6MTtzOjg6ImVsaW1pbmFyIjtiOjE7fWk6NzthOjU6e3M6Njoib2JqZXRvIjtzOjE1OiJHZXN0acOzbiBkZSBDQUkiO3M6ODoiaW5zZXJ0YXIiO2I6MTtzOjEwOiJhY3R1YWxpemFyIjtiOjE7czo3OiJtb3N0cmFyIjtiOjE7czo4OiJlbGltaW5hciI7YjoxO31pOjg7YTo1OntzOjY6Im9iamV0byI7czoyMToiQml0w6Fjb3JhIGRlbCBzaXN0ZW1hIjtzOjg6Imluc2VydGFyIjtiOjE7czoxMDoiYWN0dWFsaXphciI7YjoxO3M6NzoibW9zdHJhciI7YjoxO3M6ODoiZWxpbWluYXIiO2I6MTt9aTo5O2E6NTp7czo2OiJvYmpldG8iO3M6MjE6Ikdlc3Rpw7NuIGRlIGVtcGxlYWRvcyI7czo4OiJpbnNlcnRhciI7YjoxO3M6MTA6ImFjdHVhbGl6YXIiO2I6MTtzOjc6Im1vc3RyYXIiO2I6MTtzOjg6ImVsaW1pbmFyIjtiOjE7fWk6MTA7YTo1OntzOjY6Im9iamV0byI7czoyMDoiR2VzdGnDs24gZGUgY2xpZW50ZXMiO3M6ODoiaW5zZXJ0YXIiO2I6MTtzOjEwOiJhY3R1YWxpemFyIjtiOjE7czo3OiJtb3N0cmFyIjtiOjE7czo4OiJlbGltaW5hciI7YjoxO31pOjExO2E6NTp7czo2OiJvYmpldG8iO3M6MzI6Ikdlc3Rpw7NuIGRlIHJlY29ycmlkb3MgZXNjb2xhcmVzIjtzOjg6Imluc2VydGFyIjtiOjE7czoxMDoiYWN0dWFsaXphciI7YjoxO3M6NzoibW9zdHJhciI7YjoxO3M6ODoiZWxpbWluYXIiO2I6MTt9aToxMjthOjU6e3M6Njoib2JqZXRvIjtzOjI0OiJQYW5lbCBkZSBhZG1pbmlzdHJhY2nDs24iO3M6ODoiaW5zZXJ0YXIiO2I6MTtzOjEwOiJhY3R1YWxpemFyIjtiOjE7czo3OiJtb3N0cmFyIjtiOjE7czo4OiJlbGltaW5hciI7YjoxO31pOjEzO2E6NTp7czo2OiJvYmpldG8iO3M6MTg6Ikdlc3Rpw7NuIGRlIEJhY2t1cCI7czo4OiJpbnNlcnRhciI7YjoxO3M6MTA6ImFjdHVhbGl6YXIiO2I6MTtzOjc6Im1vc3RyYXIiO2I6MTtzOjg6ImVsaW1pbmFyIjtiOjE7fWk6MTQ7YTo1OntzOjY6Im9iamV0byI7czozMjoiR2VzdGnDs24gZGUgcmVjb3JyaWRvcyBlc2NvbGFyZXMiO3M6ODoiaW5zZXJ0YXIiO2I6MTtzOjEwOiJhY3R1YWxpemFyIjtiOjE7czo3OiJtb3N0cmFyIjtiOjE7czo4OiJlbGltaW5hciI7YjoxO319fX0=',1750874806),('TAN9eF9YxfbtOCYTr4FXilBewrbBR6D2e3t4zX6u',NULL,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36','YTozOntzOjY6Il90b2tlbiI7czo0MDoiQzVXaDdnMHlFNE1Hd3RzWlRKRG1vVG1wS3FveHlBRnNiRkZMVHlpRCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9sb2dpbiI7fX0=',1750871695),('uBD87f7vSnI22dqsSg0uhIKoOSVOWHcYj7INkFoa',NULL,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0','YTo1OntzOjY6Il90b2tlbiI7czo0MDoiT3dkaEdvbVlxQ0FJb1lsZ1ZBWmZkUkVWY1l6VFFPYUkyUGpmTW5aZiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzM6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9zZXQtc2Vzc2lvbiI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NzoidXN1YXJpbyI7czo0OiJNaWtlIjtzOjU6InRva2VuIjtzOjY6ImFiYzEyMyI7fQ==',1750866987);
+INSERT INTO `sessions` VALUES ('40M0JY6b2rPXYPbaKND9iHONRfnXbC3nILHTdvJY',NULL,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0','YTozOntzOjY6Il9mbGFzaCI7YToyOntzOjM6Im5ldyI7YTowOnt9czozOiJvbGQiO2E6MDp7fX1zOjY6Il90b2tlbiI7czo0MDoiMWRmc0NJZ1lOOWpwckUxOFNTaldSQmFoUmw4WDNtMTFidEQ4YnN0QiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9sb2dpbiI7fX0=',1750897370);
 /*!40000 ALTER TABLE `sessions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -946,7 +869,7 @@ CREATE TABLE `telefonos` (
 
 LOCK TABLES `telefonos` WRITE;
 /*!40000 ALTER TABLE `telefonos` DISABLE KEYS */;
-INSERT INTO `telefonos` VALUES (6,'97497264',6),(7,'99998888',7),(8,'99887766',10),(9,'98765432',14),(11,'98761234',16),(12,'987234',17),(13,'88889999',21),(14,'987234',26),(20,'54634223',32),(21,'88689857',33),(22,'4354543',34),(23,'987234',35),(25,'8868574',37),(26,'67543234',38),(27,'6789999',39),(28,'98765432',40),(29,'23223277',41),(33,'98765432',46),(34,'56756433',47),(35,'67676767',49),(36,'63643563',50),(38,'353345',52),(39,'87436733',53),(40,'65343344',54),(41,'55665566',55),(42,'55665566',56),(43,'54354534',57),(44,'12343288',58),(45,'53535333',59),(46,'67354256',60),(47,'44444444',61),(48,'65343344',62);
+INSERT INTO `telefonos` VALUES (6,'97497264',6),(7,'99998888',7),(11,'98761234',16),(12,'987234',17),(13,'88889999',21),(14,'987234',26),(20,'54634223',32),(21,'88689857',33),(22,'4354543',34),(23,'987234',35),(25,'8868574',37),(38,'353345',52),(41,'55665566',55),(45,'95921947',59),(46,'12343288',60),(47,'98253426',62),(48,'32897894',63);
 /*!40000 ALTER TABLE `telefonos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1008,11 +931,11 @@ DROP TABLE IF EXISTS `users`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `remember_token` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -1068,7 +991,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'zunga.hch','$2b$10$G.HlDamnc6VsYeYyLH.S.eIBvVuxAfe1YdEPVaNQUEfNGMeslV4pq',1,0,1,2,0,'::1',NULL,NULL,'2025-06-06 23:38:29',NULL,NULL,6),(2,'carlosr','$2b$10$abcdefghijk1234567890ZXCvbnm',1,0,8,2,1,NULL,NULL,NULL,'2025-06-07 08:07:33',NULL,NULL,7),(3,'javiers','$2b$10$/cqTzSocLHuITxi4Cg3hwuu8D03aGr6.KTCwE3pPnfD6YBLTtQcWq',1,0,2,2,0,'::1',NULL,NULL,'2025-06-07 08:18:52',NULL,NULL,8),(4,'kellyn.castillo121','$2b$10$8hLaw3DJQ2w4iFN4JdS/NuSkh8OlKz/daiXBvT5eagrv6cQ4bVP9.',1,0,4,2,0,'::1',NULL,NULL,'2025-06-08 12:11:25',NULL,NULL,9),(5,'admin.lord801','$2b$10$Ds7zn5tJgknmQqahzMhttePYpDqFO2f8lXjtzGmWxwpFNM0OA2jQq',1,0,1,1,0,'::1',NULL,NULL,'2025-06-08 12:14:41',NULL,NULL,10),(6,'javiers','$2b$10$epNqTgUnbWtHGsqjTr49LeZysAWr3eVjI2wkRUT3B3H.DL7BGxoqm',1,0,2,2,1,NULL,NULL,NULL,'2025-06-08 12:26:11',NULL,NULL,11),(7,'kellyn.castillo333','$2b$10$HwaV2kDHQe6DlFP8gDZLEehC5iKtLL0Rlg84ldHN136MNoXBu9iFa',1,0,1,2,0,'::1',NULL,NULL,'2025-06-08 13:56:06',NULL,NULL,12),(8,'javiers','$2b$10$0BIrzFKUDcmpaC5u7onkGul4Z3FgsQCS/JI16/N9O8TDqDlvO7Dmu',1,0,1,1,1,NULL,NULL,NULL,'2025-06-14 18:45:43',NULL,NULL,13),(9,'ya.se.jodio876','$2b$10$VawRySYI2MQGGZXmPH1/NeVgZO8jiF/GYlclsGrAudGuxdikaFz1a',1,0,4,1,1,NULL,NULL,NULL,'2025-06-14 18:57:06',NULL,NULL,14),(10,'funxiona.siono151','$2b$10$fA0TPMxG5DVvEpJm1Vip2.0AmNNpW1jixhNE2W1DdtZNT2/gT4cQ6',0,0,1,1,1,NULL,NULL,NULL,'2025-06-14 19:21:16',NULL,NULL,15),(11,'ultima.prueba236','$2b$10$1NtXXe3V3adBeq7Xo2aTX.SY33OwDc1ZrOE8qKx78c/vSyIBrUy.K',1,0,1,1,1,NULL,NULL,NULL,'2025-06-14 19:40:51',NULL,NULL,16),(12,'ya.no.esta.en.duro111','$2b$10$wekg/OSzGwWtH85IXHzyW.GQyXhkoXShbeI75.frhNSQ1cdhcPyrC',0,0,8,1,1,NULL,NULL,NULL,'2025-06-20 11:07:47',NULL,NULL,17),(13,'miguel.garcia777','$2b$10$qj9WO.wciZ176gdF91i7LuP0bo5WJHb4evnmtyeKtexLojKb0ca4C',1,3,2,1,0,'::1',NULL,NULL,'2025-06-20 16:09:14',NULL,NULL,18),(14,'carlos.riveras555','$2b$10$ANkc/TXodKN1//ihsT0tZ.AU6iq.nZj8ToUdzQwKdxWs6dlmuv36q',0,0,5,1,1,NULL,NULL,NULL,'2025-06-21 11:16:47',NULL,NULL,19),(15,'prueba.primer.ingreso111','$2b$10$d6djQ9e7xeFq9Et3A7iXq.tBLdGY.dCDXNFtHehg6MwzG6/2dm1Ma',1,0,1,1,0,'::1',NULL,NULL,'2025-06-21 11:22:19',NULL,NULL,20),(16,'moises.ucles123','$2b$10$g/.soC.wA7uVSnHAUvDpN.7Vm1/yKurgoGJKZpu6pMjRcgTKA119W',1,0,1,1,0,'::1',NULL,NULL,'2025-06-16 22:08:32',NULL,NULL,21),(17,'hola.mundo333','$2b$10$.VzGHuMc9nxS3vAL5DFWPemoDYF.U9F91Oso4l7LLVX5xwqdhmh/q',1,0,8,1,1,NULL,NULL,NULL,'2025-06-23 09:35:01',NULL,NULL,22),(18,'probando.ocultar383','$2b$10$aLS.2tul9sLAHnOTU/ytEuL0VNhxD4FKPQGbAIuLKBvbeCTujePtO',1,0,1,2,1,NULL,NULL,NULL,'2025-06-23 11:00:25',NULL,NULL,23),(19,'kellyn.castillo555','$2b$10$gH97ET6fKyzixoQJ1VBi8u4ThT2LIRbfSmwcDIfo47mX/t.NH9iv.',1,0,1,1,1,NULL,NULL,NULL,'2025-06-24 00:48:46',NULL,NULL,24),(20,'probando.campos.ocultos345','$2b$10$0fMnRedH9I396xHO5/jBOe2LmiIe5X90Z7un/6B4PE6HgVLYGx1fG',1,0,1,1,1,NULL,NULL,NULL,'2025-06-24 01:07:05',NULL,NULL,25);
+INSERT INTO `usuarios` VALUES (1,'zunga.hch','$2b$10$G.HlDamnc6VsYeYyLH.S.eIBvVuxAfe1YdEPVaNQUEfNGMeslV4pq',1,0,1,2,0,'::1',NULL,NULL,'2025-06-06 23:38:29',NULL,NULL,6),(17,'kellyn.castillo623','$2b$10$yf7TZBMdbHL5smEzXimmT.jndko8sM3Db6eZZJZLojHW4waIhQiLq',0,3,17,1,0,'::1',NULL,NULL,'2025-06-24 15:15:30',NULL,NULL,22),(18,'moises.ucles123','$2b$10$RMZzaSq.T1ggM4HTX7LZzO0wmzph2CAzGFKHp0hsAJKqks2r3cdky',1,0,4,1,0,'::1',NULL,NULL,'2025-06-24 15:21:52',NULL,NULL,23),(19,'roger.aldair.figuero000','$2b$10$uFpzZxjSooPMjuKQV.wMROgFiHJAflgjRgzqokfg2ugN0gELDdnka',0,0,17,1,1,NULL,NULL,NULL,'2025-06-24 16:46:59',NULL,NULL,24),(20,'chiminike654','$2b$10$PldMHU9deSCzEifdCsqRCOUSRNlRR2.AEZsCqs0FhOUezt34lmqqm',0,0,17,1,0,'::1',NULL,NULL,'2025-06-25 10:43:14',NULL,NULL,25);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1094,12 +1017,16 @@ CREATE TABLE `verificacion_2fa` (
 
 LOCK TABLES `verificacion_2fa` WRITE;
 /*!40000 ALTER TABLE `verificacion_2fa` DISABLE KEYS */;
-INSERT INTO `verificacion_2fa` VALUES (1,'252237','2025-06-25 11:07:36'),(3,'165400','2025-06-07 08:58:58'),(4,'654299','2025-06-20 15:57:40'),(5,'220417','2025-06-24 22:48:18'),(7,'680425','2025-06-21 11:15:14'),(13,'951290','2025-06-21 10:50:33'),(15,'276949','2025-06-21 11:29:03');
+INSERT INTO `verificacion_2fa` VALUES (1,'843124','2025-06-25 18:25:48'),(17,'458463','2025-06-24 18:13:01'),(18,'593341','2025-06-25 18:27:14'),(20,'574624','2025-06-25 15:32:22');
 /*!40000 ALTER TABLE `verificacion_2fa` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Dumping routines for database 'factura_chiminike'
+-- Dumping events for database 'facturas_chiminikee'
+--
+
+--
+-- Dumping routines for database 'facturas_chiminikee'
 --
 /*!50003 DROP PROCEDURE IF EXISTS `sp_actualizar_detalle_cotizacion` */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
@@ -2925,6 +2852,25 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_ObtenerDescripciones` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_ObtenerDescripciones`()
+BEGIN
+    SELECT cod_objeto, descripcion FROM objetos;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!50003 DROP PROCEDURE IF EXISTS `sp_permisos_usuario` */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -3161,4 +3107,6 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-06-25 21:03:09
+-- Dump completed on 2025-06-25 22:18:06
+
+--
