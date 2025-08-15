@@ -1,0 +1,156 @@
+/* ======== General ======== */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+    font-weight: 600;
+    color: #333;
+}
+
+/* ======== Tabla ======== */
+.table {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table thead {
+    background-color: #343a40;
+    color: #fff;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #e9ecef;
+    transition: background-color 0.3s;
+}
+
+.table td, .table th {
+    vertical-align: middle;
+    text-align: center;
+}
+
+/* ======== Botones ======== */
+.btn {
+    transition: transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+}
+
+/* ======== Badges ======== */
+.badge {
+    font-size: 0.9rem;
+    padding: 0.5em 0.7em;
+    border-radius: 6px;
+}
+
+/* ======== Alerts ======== */
+.alert {
+    font-size: 0.95rem;
+    padding: 0.6em 1em;
+}
+
+.alert .btn-close {
+    top: 0.5rem;
+    right: 0.8rem;
+}
+
+
+
+
+.contenedor-modal {
+    font-family: 'Segoe UI', sans-serif;
+    padding: 15px;
+}
+
+.encabezado-modal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo-modal {
+    width: 60px;
+    height: auto;
+}
+
+.titulo-modal {
+    text-align: center;
+}
+
+.titulo-modal h4 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.titulo-modal p {
+    margin: 0;
+    font-weight: 500;
+}
+
+.datos-evento-modal p {
+    margin: 2px 0;
+    font-size: 0.95rem;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+    font-size: 0.9rem;
+}
+
+.mensaje-modal {
+    text-align: center;
+    font-size: 0.95rem;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.botones-modal {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.botones-modal button {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+}
+
+
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #detalleModal, #detalleModal * {
+        visibility: visible;
+    }
+    #detalleModal {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    .modal-header, .btn-close, .botones-modal {
+        display: none !important;
+    }
+}

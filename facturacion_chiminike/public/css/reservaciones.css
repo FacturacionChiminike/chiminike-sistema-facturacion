@@ -1,0 +1,117 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+h2 {
+    color: #006633;
+    font-weight: 600;
+}
+
+.table th, .table td {
+    vertical-align: middle !important;
+}
+
+.btn-primary {
+    background-color: #006633;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #004d26;
+}
+
+.btn-warning {
+    color: white;
+}
+
+.badge.bg-success {
+    font-size: 0.9rem;
+}
+
+.badge.bg-secondary {
+    font-size: 0.9rem;
+}
+
+
+
+
+.contenedor-modal {
+    font-family: 'Segoe UI', sans-serif;
+    padding: 15px;
+}
+
+.encabezado-modal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo-modal {
+    width: 60px;
+    height: auto;
+}
+
+.titulo-modal {
+    text-align: center;
+}
+
+.titulo-modal h4 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.titulo-modal p {
+    margin: 0;
+    font-weight: 500;
+}
+
+.datos-evento-modal p {
+    margin: 2px 0;
+    font-size: 0.95rem;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+    font-size: 0.9rem;
+}
+
+.mensaje-modal {
+    text-align: center;
+    font-size: 0.95rem;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.botones-modal {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.botones-modal button {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+}
+
+
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #detalleModal, #detalleModal * {
+        visibility: visible;
+    }
+    #detalleModal {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    .modal-header, .btn-close, .botones-modal {
+        display: none !important;
+    }
+}

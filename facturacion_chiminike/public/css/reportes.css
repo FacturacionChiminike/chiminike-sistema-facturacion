@@ -1,0 +1,530 @@
+:root {
+  --primary-color: #254f25;       /* Verde oscuro principal */
+  --secondary-color: #1a1a1a;     /* Negro para sidebar y fondos */
+  --accent-color: #f1f0ea;        /* Beige claro para bordes y detalles */
+  --text-color: #333333;          /* Color de texto principal */
+  --text-light: #f1f0ea;          /* Texto claro para fondos oscuros */
+  --white: #ffffff;               /* Blanco puro */
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+body {
+  background-color: var(--white);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal */
+#contenedor-reportes {
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--accent-color);
+}
+
+/* Encabezado */
+.header-section {
+  margin-bottom: 2rem;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.header-section h1 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 0.3s;
+  z-index: 1000;
+  border-right: 2px solid var(--accent-color);
+}
+
+.sidebar-header {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.sidebar-header .logo {
+  color: var(--text-light);
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.sidebar-header .logo span {
+  color: var(--accent-color);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.user-avatar {
+  font-size: 2rem;
+  margin-right: 15px;
+  color: var(--text-light);
+}
+
+.user-details {
+  text-align: left;
+}
+
+.user-name {
+  display: block;
+  font-weight: 600;
+}
+
+.user-role {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.sidebar-menu {
+  padding: 20px;
+}
+
+.menu-item {
+  display: block;
+  padding: 10px 15px;
+  color: var(--text-light);
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  transition: all 0.3s;
+  border-left: 3px solid transparent;
+}
+
+.menu-item:hover, .menu-item.active {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border-left: 3px solid var(--accent-color);
+}
+
+.menu-item i {
+  margin-right: 10px;
+}
+
+.submenu {
+  padding-left: 20px;
+}
+
+.sidebar-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  border-top: 1px solid var(--accent-color);
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid var(--accent-color);
+}
+
+.logout-btn:hover {
+  background-color: var(--primary-color);
+}
+
+.logout-btn i {
+  margin-right: 10px;
+}
+
+/* Main content */
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+  transition: margin-left 0.3s;
+  background-color: var(--white);
+}
+
+/* Tarjetas de resumen */
+.summary-card {
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+  height: 100%;
+  background-color: var(--white);
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--primary-color);
+}
+
+.summary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(37, 79, 37, 0.2);
+}
+
+.summary-card .card-body {
+  padding: 1.5rem;
+}
+
+.summary-card .card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--primary-color);
+}
+
+.summary-card .card-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  color: var(--primary-color);
+}
+
+.summary-card .icon-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+/* Tarjetas de gráficos */
+.chart-card {
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+  background-color: var(--white);
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.chart-card .card-header {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 15px 20px;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.chart-card .card-body {
+  padding: 1.5rem;
+  background-color: var(--white);
+}
+
+/* Estilos para tablas */
+.table-responsive {
+  border: 1px solid var(--accent-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0;
+}
+
+.table thead {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+.table th {
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--accent-color);
+  background-color: var(--white);
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table tr:hover td {
+  background-color: rgba(37, 79, 37, 0.1);
+}
+
+/* Contenedores de gráficos */
+.chart-container {
+  position: relative;
+  height: 300px;
+  margin-bottom: 20px;
+  border: 1px solid var(--accent-color);
+  border-radius: 8px;
+  padding: 15px;
+  background-color: var(--white);
+}
+
+/* Leyenda de gráficos */
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 15px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin: 5px 10px;
+}
+
+.legend-color {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 1px solid var(--accent-color);
+}
+
+/* Botones */
+.btn {
+  border: 2px solid var(--primary-color);
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: all 0.3s;
+  background-color: var(--white);
+  color: var(--primary-color);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+.btn-danger {
+  background-color: var(--white);
+  color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #dc3545;
+  color: var(--text-light);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+/* Botones de rango de fechas */
+.btn-date {
+  background-color: var(--white);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  margin: 0 5px;
+}
+
+.btn-date.active {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border-color: var(--primary-color);
+}
+
+/* Modal para tablas ampliadas */
+.table-modal .modal-content {
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table-modal .modal-header {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.table-modal .modal-body {
+  background-color: var(--white);
+}
+
+.table-modal .modal-footer {
+  border-top: 1px solid var(--accent-color);
+  background-color: var(--white);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .sidebar {
+    width: 0;
+    overflow: hidden;
+  }
+  
+  .main-content {
+    margin-left: 0;
+  }
+  
+  .header-section h1 {
+    font-size: 2rem;
+  }
+  
+  .summary-card .card-value {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .chart-container {
+    height: 250px;
+  }
+  
+  .table th, 
+  .table td {
+    padding: 10px 12px;
+  }
+}
+
+/* Efectos adicionales */
+.expand-table-btn {
+  cursor: pointer;
+  color: var(--primary-color);
+  transition: all 0.3s;
+  background-color: var(--accent-color);
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--primary-color);
+}
+
+.expand-table-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.chart-card, .summary-card {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Clases utilitarias */
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.border-primary {
+  border-color: var(--primary-color) !important;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--accent-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
+
+#graficaEventos-container {
+    width: 100%;
+    position: relative;
+    min-height: 500px;
+    margin: 20px 0;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#graficaEventos {
+    width: 100% !important;
+    height: 400px !important;
+}
+
+.chart-legend {
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    margin-top: 20px !important;
+}
+
+#graficaInventario-container {
+    width: 100%;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+.header-info {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    border-left: 4px solid #3498db;
+    display: table;
+    width: 100%;
+}
+
+.header-info > div {
+    display: table-cell;
+    width: 50%;
+}
+
+ .fila-inactiva td {
+        background-color: #f8d7da !important;
+  }

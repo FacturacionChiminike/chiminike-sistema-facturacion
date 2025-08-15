@@ -1,0 +1,977 @@
+/* ===== VARIABLES CSS ===== */
+:root {
+  /* Colores principales - Tema Púrpura */
+  --primary-color: #f1f0ea;
+  --primary-hover: #f1f0ea;
+  --primary-light: #f1f0ea;
+  --primary-dark: #f1f0ea;
+  --secondary-color: #f1f0ea;
+  --secondary-hover: #f1f0ea;
+
+  /* Colores de acento */
+  --accent-orange: #f97316;
+  --accent-orange-hover: #ea580c;
+  --success-color: #D9272E;  /* antes: #10b981 */
+  --warning-color: #f59e0b;
+  --danger-color: #ef4444;
+  --danger-hover: #dc2626;
+
+  --bg-gradient: linear-gradient(135deg, #f1f0ea 0%, #f1f0ea 100%);
+  --bg-gradient-alt: linear-gradient(135deg, #f1f0ea 0%, #f1f0ea 50%, #f1f0ea 100%);
+
+  /* Colores de fondo */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  --bg-dark: #1e293b;
+  --bg-modal-overlay: rgba(15, 23, 42, 0.8);
+
+  /* Colores de texto */
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+  --text-white: #ffffff;
+  --text-purple: #7c3aed;
+
+  /* Bordes */
+  --border-color: #e2e8f0;
+  --border-hover: #cbd5e1;
+  --border-radius: 12px;
+  --border-radius-lg: 16px;
+  --border-radius-xl: 20px;
+
+  /* Sombras */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-card: 0 8px 25px -5px rgb(124 58 237 / 0.1);
+
+  /* Espaciado */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+
+  /* Tipografía */
+  --font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+
+  /* Transiciones */
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== RESET Y BASE ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: var(--bg-gradient-alt);
+  min-height: 100vh;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg-gradient-alt);
+  z-index: -1;
+}
+
+/* ===== ENCABEZADO DE PÁGINA ===== */
+.page-header {
+  background: transparent;
+  color: var(--text-white);
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+}
+
+.page-header h2 {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  margin: 0;
+  color: #000000; /* Cambiado a negro */
+  text-shadow: none; /* Eliminado el efecto borroso */
+  letter-spacing: -0.025em;
+}
+
+
+/* ===== SECCIÓN DE FILTROS ===== */
+.filters-section {
+  background: var(--bg-primary);
+  padding: var(--spacing-xl);
+  margin: 0 var(--spacing-lg) var(--spacing-xl);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+  align-items: end;
+}
+
+.filters-section label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+  gap: var(--spacing-sm);
+  min-width: 140px;
+}
+
+.filters-section input,
+.filters-section select {
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-sm);
+  transition: var(--transition);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.filters-section input:focus,
+.filters-section select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px var(--primary-light);
+  transform: translateY(-1px);
+}
+
+.filters-section input[type="text"] {
+  min-width: 220px;
+}
+
+/* ===== BOTONES ===== */
+.btn-primary {
+  background: var(--primary-color);
+  color: var(--text-white);
+  border: none;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  text-decoration: none;
+  box-shadow: var(--shadow-md);
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover); /* ya no se vuelve blanco */
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-sm {
+  padding: var(--spacing-sm);
+  font-size: var(--font-size-xs);
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  font-weight: 500;
+}
+
+.btn-view {
+  background: var(--success-color);
+  color: var(--text-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-view:hover {
+  background: #B71F25; /* antes: #059669 */
+  transform: scale(1.1);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-edit {
+  background: var(--warning-color);
+  color: var(--text-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-edit:hover {
+  background: #d97706;
+  transform: scale(1.1);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-delete {
+  background: var(--danger-color);
+  color: var(--text-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-delete:hover {
+  background: var(--danger-hover);
+  transform: scale(1.1);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-del-prod {
+  background: var(--danger-color);
+  color: var(--text-white);
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  padding: 0;
+  font-size: 12px;
+}
+
+.btn-del-prod:hover {
+  background: var(--danger-hover);
+  transform: scale(1.1);
+}
+
+/* Botón especial naranja como en la imagen */
+.btn-orange {
+  background: var(--accent-orange);
+  color: var(--text-white);
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-orange:hover {
+  background: var(--accent-orange-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ===== CONTENEDOR DE TABLA ===== */
+.table-container {
+  margin: 0 var(--spacing-lg);
+  background: var(--bg-primary);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+/* ===== TABLA DE DATOS ===== */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.data-table thead {
+  background: var(--primary-color);
+}
+
+.data-table th {
+  padding: var(--spacing-lg);
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-white);
+  border: none;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  font-size: var(--font-size-xs);
+}
+
+.data-table td {
+  padding: var(--spacing-lg);
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: middle;
+  font-weight: 500;
+}
+
+.data-table tbody tr {
+  transition: var(--transition);
+}
+
+.data-table tbody tr:hover {
+  background: linear-gradient(90deg, var(--primary-light), transparent);
+  transform: scale(1.01);
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table td:last-child {
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== MODALES ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-modal-overlay);
+  backdrop-filter: blur(8px);
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-lg);
+}
+
+.modal-content {
+  background: var(--bg-primary);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-xl);
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 0;
+  animation: modalSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Header del modal con fondo púrpura */
+.modal-content h3 {
+  background: var(--primary-color);
+  color: var(--text-white);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  margin: 0 0 var(--spacing-xl) 0;
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  border-radius: var(--border-radius-xl) var(--border-radius-xl) 0 0;
+  text-align: center;
+  letter-spacing: -0.025em;
+}
+
+.modal-content > div:first-child {
+  padding: var(--spacing-xl);
+}
+
+.close {
+  position: absolute;
+  top: var(--spacing-lg);
+  right: var(--spacing-lg);
+  font-size: var(--font-size-xl);
+  font-weight: bold;
+  color: var(--text-white);
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: var(--transition);
+  z-index: 10;
+}
+
+.close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+/* ===== CONTENIDO DE FACTURA ===== */
+#facturaVistaContent {
+  max-width: 800px;
+  line-height: 1.6;
+  padding: var(--spacing-xl);
+}
+
+#facturaVistaContent h2 {
+  background: var(--primary-color);
+  color: var(--text-white);
+  margin: calc(-1 * var(--spacing-xl)) calc(-1 * var(--spacing-xl)) var(--spacing-xl);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  font-size: var(--font-size-2xl);
+  text-align: center;
+  border-radius: var(--border-radius-xl) var(--border-radius-xl) 0 0;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+#facturaVistaContent p {
+  margin-bottom: var(--spacing-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm) 0;
+}
+
+#facturaVistaContent strong {
+  color: var(--text-primary);
+  min-width: 180px;
+  font-weight: 600;
+}
+
+#facturaVistaContent hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  margin: var(--spacing-xl) 0;
+  border-radius: 1px;
+}
+
+#facturaVistaContent table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--spacing-lg) 0;
+  font-size: var(--font-size-sm);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+#facturaVistaContent table th {
+  background: var(--primary-color);
+  color: var(--text-white);
+  padding: var(--spacing-md);
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  font-size: var(--font-size-xs);
+}
+
+#facturaVistaContent table td {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--border-color);
+  font-weight: 500;
+}
+
+#facturaVistaContent table tbody tr:hover {
+  background: var(--primary-light);
+}
+
+/* ===== FORMULARIOS ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-xl);
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+  gap: var(--spacing-sm);
+}
+
+form input,
+form select,
+form textarea {
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-sm);
+  transition: var(--transition);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-weight: 500;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px var(--primary-light);
+  transform: translateY(-1px);
+}
+
+form input[readonly] {
+  background: var(--bg-secondary);
+  color: var(--text-muted);
+  border-color: var(--border-color);
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* ===== TABLA DE PRODUCTOS EN FORMULARIO ===== */
+#tabla-productos-edit {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+  margin: var(--spacing-lg) 0;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+#tabla-productos-edit th {
+  background: var(--primary-color);
+  color: var(--text-white);
+  padding: var(--spacing-md);
+  text-align: center;
+  font-weight: 600;
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+#tabla-productos-edit td {
+  padding: var(--spacing-sm);
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+  background: var(--bg-primary);
+}
+
+#tabla-productos-edit tbody tr:hover {
+  background: var(--primary-light);
+}
+
+#tabla-productos-edit input,
+#tabla-productos-edit select {
+  border: 1px solid var(--border-color);
+  background: transparent;
+  padding: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  width: 100%;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+}
+
+#tabla-productos-edit input:focus,
+#tabla-productos-edit select:focus {
+  background: var(--bg-primary);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px var(--primary-light);
+}
+
+/* ===== DISEÑO RESPONSIVE ===== */
+@media (max-width: 1200px) {
+  .modal-content {
+    max-width: 95vw;
+    padding: 0;
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+
+  .data-table {
+    min-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+
+  .page-header h2 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .filters-section {
+    margin: 0 var(--spacing-md) var(--spacing-lg);
+    padding: var(--spacing-lg);
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filters-section label {
+    min-width: auto;
+  }
+
+  .table-container {
+    margin: 0 var(--spacing-md);
+  }
+
+  .modal {
+    padding: var(--spacing-md);
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: var(--spacing-md);
+    font-size: var(--font-size-xs);
+  }
+
+  #facturaVistaContent p {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+
+  #facturaVistaContent strong {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .filters-section {
+    gap: var(--spacing-md);
+  }
+
+  .btn-primary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .data-table td:last-child {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  .btn-sm {
+    min-width: 32px;
+    height: 32px;
+    font-size: 10px;
+  }
+}
+
+/* ===== EFECTOS ESPECIALES ===== */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== ANIMACIONES ADICIONALES ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* ===== SCROLLBAR PERSONALIZADA ===== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: var(--border-radius);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-hover); /* ya no blanco */
+}
+
+/* ===== UTILIDADES ===== */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mt-1 {
+  margin-top: var(--spacing-md);
+}
+
+.hidden {
+  display: none;
+}
+
+.purple-gradient {
+  background: var(--bg-gradient-alt);
+}
+
+.card-hover {
+  transition: var(--transition);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+.btn-pdf {
+  /* Reutilizamos todos los estilos de .btn-primary */
+  background: var(--primary-color);
+  color: var(--text-white);
+  border: none;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  text-decoration: none;       /* Quita el subrayado del enlace */
+  box-shadow: var(--shadow-md);
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.btn-pdf:hover {
+  background: var(--primary-hover); /* ya no blanco */
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ===== VARIABLES (override final para tema rojo y hovers) ===== */
+:root {
+  --primary-color: #D9272E;                 /* color base que ya tenías */
+  --primary-hover: #B4282D;                 /* <— evita hover blanco */
+  --primary-light: rgba(217, 39, 46, 0.10); /* halo/hover suave rojito */
+  --secondary-color: #D9272E;
+  --danger-color: #e74a3b;
+  --danger-dark: #c53030;
+  --success-color: #D9272E;
+  --success-dark: #B71F25;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fc;
+  --text-primary: #343a40;
+  --text-secondary: #6c757d;
+  --text-white: #ffffff;
+  --border-color: #e3e6f0;
+  --border-radius: 0.5rem;
+  --border-radius-lg: 0.75rem;
+  --border-radius-xl: 1rem;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 1.75rem;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+  --transition: all 0.2s ease-in-out;
+  --bg-modal-overlay: rgba(0, 0, 0, 0.7);
+}
+
+/* ===== MODAL CON SCROLL VISIBLE ===== */
+#verFacturaModal.modal {
+  display: none;
+  position: fixed;
+  z-index: 1050;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-modal-overlay);
+  backdrop-filter: blur(5px);
+  overflow: auto; /* Scroll para todo el modal cuando sea necesario */
+}
+
+#verFacturaModal .modal-content {
+  background: var(--bg-primary);
+  margin: 2% auto;
+  padding: 0;
+  border-radius: var(--border-radius-xl);
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-xl);
+}
+
+/* Contenedor del contenido con scroll */
+.modal-body {
+  padding: var(--spacing-xl);
+  overflow-y: auto; /* Scroll solo para el contenido */
+  max-height: calc(90vh - 150px); /* Ajuste para header y footer */
+  scrollbar-width: thin; /* Para navegadores modernos */
+  scrollbar-color: var(--primary-color) var(--bg-secondary); /* Color del scroll */
+}
+
+/* Estilo personalizado para la barra de scroll */
+.modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+  border-radius: 10px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary-hover); /* ya no blanco */
+}
+
+/* Resto del CSS se mantiene igual */
+.modal-header {
+  background: var(--primary-color);
+  color: var(--text-white);
+  padding: var(--spacing-lg);
+  position: relative;
+  flex-shrink: 0; /* Evita que el header se encoja */
+}
+
+.modal-footer {
+  background: var(--bg-secondary);
+  padding: var(--spacing-lg);
+  border-top: 1px solid var(--border-color);
+  flex-shrink: 0; /* Evita que el footer se encoja */
+}
+
+/* Asegurar que la tabla sea scrollable horizontalmente si es necesario */
+.invoice-table-container {
+  overflow-x: auto;
+  width: 100%;
+}
+
+/* Responsive ajustado */
+@media (max-width: 768px) {
+  #verFacturaModal .modal-content {
+    width: 95%;
+    margin: 1% auto;
+    max-height: 98vh;
+  }
+  
+  .modal-body {
+    max-height: calc(98vh - 140px);
+  }
+}
+
+#btn-dashboard {
+  background-color: #D9272E;   /* base como antes */
+  color: #fff;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+#btn-dashboard:hover {
+  background-color: #C52127;   /* hover coherente, no blanco */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+/* Botón pill "Aplicar" en rojo (antes verde) */
+#editarFacturaModal .toggle-aplicar{
+  display:inline-block;
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 1px solid #B71F25; /* antes: #1a7f4d */
+  color:#fff;
+  font-weight:700;
+  background: linear-gradient(180deg, #E44349 0%, #B71F25 100%); /* antes: #31c277 → #1f9e5e */
+  box-shadow:
+    0 2px 6px rgba(217,39,46,.25),  /* antes: rgba(16,185,129,.25) */
+    inset 0 1px 0 rgba(255,255,255,.25);
+  cursor:pointer;
+  transition: background .15s ease, box-shadow .15s ease, transform .05s ease, filter .15s ease;
+}
+#editarFacturaModal .toggle-aplicar:hover{
+  filter: brightness(1.05);
+  box-shadow:
+    0 4px 10px rgba(217,39,46,.30), /* antes: rgba(16,185,129,.30) */
+    inset 0 1px 0 rgba(255,255,255,.30);
+}
+#editarFacturaModal .toggle-aplicar:active{
+  transform: translateY(1px);
+  filter: brightness(.97);
+}
+/* cuando esté aplicado (tu JS ya pone .active) lo hacemos más oscuro */
+#editarFacturaModal .toggle-aplicar.active{
+  background: linear-gradient(180deg, #C52127 0%, #A61E23 100%); /* antes: #1f9e5e → #166b43 */
+  border-color:#A61E23; /* antes: #145a37 */
+}
+#editarFacturaModal .toggle-aplicar:focus-visible{
+  outline: 3px solid rgba(217,39,46,.35); /* antes: rgba(34,197,94,.35) */
+  outline-offset: 2px;
+}
+#editarFacturaModal .toggle-aplicar[disabled]{
+  opacity:.6; cursor:not-allowed;
+}

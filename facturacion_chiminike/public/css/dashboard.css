@@ -1,0 +1,479 @@
+/* Variables de colores profesionales (basadas en tu imagen) */
+:root {
+    --primary-color: #006633; /* Verde Oscuro para acentos principales */
+    --secondary-color: #41c532; /* Verde Brillante para elementos destacados */
+    --sidebar-bg: #1a1a1a; /* Un gris muy oscuro, casi negro, para el sidebar */
+    --sidebar-text: #F1F0EA; /* Blanco roto para el texto del sidebar */
+    --sidebar-active: #006633; /* Verde Oscuro para el elemento activo del sidebar */
+    --sidebar-hover: #333333; /* Gris oscuro para el hover del sidebar */
+    --header-bg: #F1F0EA; /* Blanco roto para el fondo del header */
+    --content-bg: #F1F0EA; /* Blanco roto para el fondo del contenido */
+    --text-dark: #1a1a1a; /* Gris muy oscuro para el texto principal */
+    --text-light: #78777A; /* Gris de la paleta para texto secundario */
+    --submenu-bg: #0d0d0d; /* Un gris aún más oscuro para el submenú */
+
+    /* Nuevas variables para formas y sombras */
+    --border-radius-sm: 6px;
+    --border-radius-md: 10px;
+    --border-radius-lg: 16px;
+    --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --shadow-strong: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Nunito', -apple-system, BlinkMacMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--content-bg);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 250px;
+    background-color: var(--sidebar-bg); /* Usando el nuevo color de fondo */
+    color: var(--sidebar-text);
+    transition: all 0.3s;
+    height: 100vh;
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-medium); /* Sombra mejorada */
+    border-radius: var(--border-radius-md); /* Bordes redondeados */
+    overflow: hidden; /* Para que la sombra y el borde se vean bien */
+}
+
+.sidebar-header {
+    padding: 1.5rem 1.5rem 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.logo span {
+    color: var(--secondary-color);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.user-avatar {
+    font-size: 2rem;
+    color: #fff;
+    margin-right: 1rem;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.user-role {
+    color: var(--sidebar-text);
+    font-size: 0.8rem;
+}
+
+.sidebar-menu {
+    padding: 1rem 0;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    position: relative;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    color: var(--sidebar-text);
+    text-decoration: none;
+    transition: all 0.3s;
+    border-radius: var(--border-radius-sm); /* Bordes redondeados */
+}
+
+.menu-item:hover {
+    background-color: var(--sidebar-hover);
+    color: #fff;
+}
+
+.menu-item i {
+    margin-right: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.menu-item.active {
+    background-color: var(--sidebar-active);
+    color: #fff;
+}
+
+.sidebar-footer {
+    padding: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logout-btn {
+    background: none;
+    border: 1px solid var(--sidebar-text); /* Borde sutil */
+    color: var(--sidebar-text);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius-sm); /* Bordes redondeados */
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.logout-btn i {
+    margin-right: 0.5rem;
+}
+
+/* Main content styles */
+.main-content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    transition: all 0.3s;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-header {
+    background-color: var(--header-bg);
+    box-shadow: var(--shadow-light); /* Sombra más suave */
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-toggle {
+    background: none;
+    border: none;
+    color: var(--text-dark);
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    display: none;
+}
+
+.page-title {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.notifications {
+    position: relative;
+    margin-right: 1.5rem;
+    color: var(--text-dark);
+    cursor: pointer;
+}
+
+.notifications .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.content-wrapper {
+    padding: 1.5rem;
+    flex: 1;
+}
+
+/* Dashboard default content */
+.dashboard-default {
+    margin-top: 1rem;
+}
+
+.welcome-card {
+    background: #ffffff;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-medium);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    border-left: 4px solid var(--primary-color);
+}
+
+.welcome-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.welcome-card p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+.stats-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background-color: #ffffff; /* Usando el color del header para consistencia */
+    border-radius: var(--border-radius-lg); /* Bordes más redondeados */
+    box-shadow: var(--shadow-medium); /* Sombra mejorada */
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-strong); /* Sombra más pronunciada en hover */
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Manteniendo la forma circular original */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    color: white;
+    font-size: 1.5rem;
+    background-color: var(--secondary-color); /* Color de acento */
+}
+
+.stat-info h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.stat-info p {
+    margin: 0;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .sidebar {
+        transform: translateX(-250px);
+        position: fixed;
+    }
+        
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+        
+    .sidebar-toggle {
+        display: block;
+    }
+        
+    .dashboard-container.sidebar-collapsed .sidebar {
+        transform: translateX(0);
+    }
+        
+    .dashboard-container.sidebar-collapsed .main-content {
+        margin-left: 250px;
+        width: calc(100% - 250px);
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-cards {
+        grid-template-columns: 1fr;
+    }
+        
+    .welcome-card {
+        padding: 1.5rem;
+    }
+        
+    .content-wrapper {
+        padding: 1rem;
+    }
+}
+
+/* Agregamos mejoras a tus variables (ajustadas para usar las nuevas variables de color y forma) */
+/* Nota: Algunas propiedades aquí pueden ser redundantes si ya se definieron arriba,
+   pero se mantienen para respetar la estructura de tu código original. */
+.sidebar {
+    width: 260px; /* Tu ajuste de ancho original */
+    background-color: var(--sidebar-bg); /* Usando la variable con gradiente */
+    color: var(--sidebar-text);
+    box-shadow: var(--shadow-medium); /* Usando la sombra mejorada */
+    transition: all 0.3s ease;
+}
+
+.logo {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.logo span {
+    color: var(--secondary-color);
+}
+
+/* Submenú estilos */
+.sidebar-menu .submenu {
+    background-color: var(--submenu-bg);
+    border-radius: var(--border-radius-sm); /* Bordes redondeados */
+    margin-top: 0.3rem;
+}
+
+.sidebar-menu ul li a {
+    color: var(--sidebar-text);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: var(--border-radius-sm); /* Bordes redondeados */
+    transition: all 0.3s ease;
+}
+
+.sidebar-menu ul li a:hover {
+    background-color: var(--sidebar-hover);
+    color: #fff;
+}
+
+.sidebar-menu ul li a.active {
+    background-color: var(--sidebar-active);
+    color: #fff;
+}
+
+.sidebar-menu ul li a i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* Separadores de los headers */
+.sidebar-menu ul li {
+    margin-bottom: 0.3rem;
+}
+
+/* Icono de flecha rotatorio cuando está abierto */
+.sidebar-menu a[aria-expanded="true"] .bi-chevron-down {
+    transform: rotate(180deg);
+    transition: transform 0.3s;
+}
+
+/* Ajuste del user-info */
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.user-avatar {
+    font-size: 2rem;
+    color: #fff;
+    margin-right: 0.8rem;
+}
+
+.user-details {
+    color: var(--sidebar-text);
+}
+
+/* Botón cerrar sesión mejorado */
+.logout-btn {
+    background-color: transparent;
+    border: 1px solid var(--sidebar-text);
+    color: var(--sidebar-text);
+    padding: 10px 20px;
+    border-radius: var(--border-radius-sm); /* Bordes redondeados */
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: var(--sidebar-hover);
+    color: #fff;
+}
+
+/* HEADER superior refinado */
+.main-header {
+    background-color: #000000;
+    border-bottom: 1px solid #e3e6f0;
+    padding: 1rem 1.5rem;
+    box-shadow: var(--shadow-light); /* Usando la sombra mejorada */
+}
+
+.text-dark
+Specificity: (0,1,0)
+ {
+    --bs-text-opacity: 1;
+    color: white !important;
+}
+
+/* Pequeños ajustes de responsividad se mantienen */
+
+ .text-dark i.bi-person-circle {
+    color: white !important;
+  }
